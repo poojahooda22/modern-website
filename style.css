@@ -9,13 +9,35 @@
 html, body {
     width: 100%;
     height: 100%;
+    background-color: black;
+}
+
+#minicircle {
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.8s;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 99999;
+    background-color: white;
+}
+
+.bounding {
+    width: fit-content;
+    overflow: hidden;
+}
+
+.boundingelem {
+    transform: translateY(100%);
 }
 
 #main {
     width: 100%;
+    background-color: black;
 }
 
 #hero {
+    position: relative;
     color: white;
     width: 100%;
     height: 100vh;
@@ -29,7 +51,7 @@ html, body {
     justify-content: space-between;
     width: 100%;
     
-    padding: 40px 40px;
+    padding: 30px 40px;
     color: white;
 }
 
@@ -39,14 +61,29 @@ html, body {
     color: white;
 }
 
+#navright {
+    display: flex;
+    align-items: center;
+    gap: 46px;
+
+}
+
+#navright a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
 #heading {
-    margin-top: 120px;
+    margin-top: 60px;
 }
 
 #heading h1 {
     /* font-family: "General Sans Medium"; */
     font-size: 9vw;
     line-height: 1;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
     font-weight: 800;
     margin-left: 40px;
@@ -60,17 +97,24 @@ html, body {
 
 .blockText {
     width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    
     
 }
 
 .blockText h5 {
     text-transform: uppercase;
     font-size: 15px;
-    text-align: right;
+    text-align: right !important;
 }
 
 #smallheadings {
-    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    margin-top: 240px;
     padding-right: 50px;
 }
 
@@ -78,11 +122,11 @@ html, body {
     text-transform: uppercase;
     margin-top: .5vw;
     font-size: 1vw;
-    text-align: right;
+    text-align: right !important;
 }
 
 #herofooter {
-    padding: 0 3vw;
+    padding: 0 2.5vw;
     width: 100%;
     position: absolute;
     bottom: 2%;
@@ -127,7 +171,7 @@ html, body {
     padding-right: 14vw;
     padding-top: 180px;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .elem {
@@ -139,38 +183,52 @@ html, body {
     margin-left: 40px;
     padding: 3.5vw 0;
     border-top: 0.35px solid rgb(93, 93, 93);
+    
 }
 
 .elem h1 {
     text-transform: uppercase;
     font-size: 7vw;
     opacity: .7;
+    
+
 }
+
+.elem a {
+    text-decoration: none;
+    color: white;
+}
+
 
 .elemlast {
     border-bottom: 0.35px solid rgb(93, 93, 93);;
 }
 
 .elem img {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
     z-index: 999;
     position: absolute;
     height: 120%;
+    transform: translate(-50%, -50%);
 }
+
+
 
 #about {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
-    padding: 10vw 3vw;
+    padding-top: 250px;
     padding-left: 40vw;
+    padding-bottom: 160px;
     width: 100%;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
 }
 
 #textabout {
-    width: 60vw;
+    width: 50vw;
 }
 
 #textabout h5 {
@@ -180,15 +238,119 @@ html, body {
 }
 
 #textabout p {
-    line-height: 1.7;
+    line-height: 2;
     margin-bottom: 30px;
+    
 }
 
-#textabout a {
+/* #textabout a {
     text-decoration: none;
     border: 1px solid white;
     border-radius: 100px;
     padding: 10px 20px;
     font-size: 12px;
     color: white;
+} */
+
+
+.chronicle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    line-height: 1;
+    width: 140px;
+    height: 48px;
+    border-radius: 50px;
+    padding: 12px 20px;
+    cursor: pointer;
+    border: 1px solid white;
+    transition: background .4s linear;
+    will-change: background;
+  }
+  
+
+  .chronicle a {
+    font-size: 10px;
+  }
+  .chronicle:hover {
+    border: 0.5px solid white;
+    
+  }
+  
+  .chronicle:hover span:nth-of-type(1) em {
+    opacity: 0;
+    transform: rotateX(90deg) scaleX(.9) translate3d(0,-10px,0);
+  }
+  
+  .chronicle:hover span:nth-of-type(2) em {
+    opacity: 1;
+    transform: rotateX(0deg) scaleX(1) translateZ(0);
+    transition: transform .75s cubic-bezier(.645,.045,.355,1),opacity .35s linear .3s;
+  }
+  
+  span {
+    position: relative;
+    display: block;
+    perspective: 108px;
+    
+  }
+  
+  span:nth-of-type(2) {
+    position: absolute;
+  }
+  
+  em {
+    font-style: normal;
+    display: inline-block;
+    font-size: 1.125rem;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    will-change: transform,opacity,transition;
+    transition: transform .55s cubic-bezier(.645,.045,.355,1),opacity .35s linear .2s;
+  }
+  
+  span:nth-of-type(1) em {
+    transform-origin: top;
+  }
+  
+  span:nth-of-type(2) em {
+    opacity: 0;
+    transform: rotateX(-90deg) scaleX(.9) translate3d(0,10px,0);
+    transform-origin: bottom;
+  }
+
+#subscribe {
+    color: white;
+    padding: 20px 40px;
+    background-color: black;
+    padding-bottom: 8vw;
+
+}
+
+#subscribe h4 {
+     text-transform: uppercase;
+     font-size: 14px;
+}
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: black;
+    color: white;
+}
+
+#footerright {
+    display: flex;
+    align-items: center;
+    gap: 46px;
+}
+
+#footerright a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+
 }
