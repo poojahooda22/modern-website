@@ -5,28 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Website</title>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
+
+    
+    <link rel="stylesheet" href="loco.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="minicircle"></div>
     <div id="main">
-        <!-- <div id="hero">
+        <div id="hero">
             <div id="nav">
                 <a href="#" class="logo">Pooja Hooda</a>
-                <h4>MENU</h4>
+                <div id="navright"> 
+                    <a href="https://www.linkedin.com/in/pooja-h-21b473124/"  target="_blank">linkedin</a>
+                    <a href="https://github.com/poojahooda22" target="_blank">Github</a>
+                    <a href="https://leetcode.com/phooda938/" target="_blank">leetcode</a>
+                    <a href="https://codepen.io/robinhudh" target="_blank">codepen</a>
+                </div>
             </div>
             <div id="heading">
-                <h1>frontend</h1>
+                <div class="bounding">
+                    <h1 class="boundingelem">frontend</h1>
+                </div>
                 <div class="blockText">
-                    <h1 id="secondh1">Developer</h1>
-                    <h5>Based in Delhi</h5>
+                    <div class="bounding">
+                        <h1 class="boundingelem" id="secondh1">Developer</h1>
+                    </div>
+                    <div class="bounding">
+                        <h5 class="boundingelem">Based in Delhi</h5>
+                    </div>
                 </div>                
             </div>
             <div id="smallheadings">
-                <h5>Available for freelance</h5>
-                <h5>work from 2022</h5>
+                <div class="bounding">
+                    <h5 class="boundingelem">available for freelance</h5>    
+                </div>
+                <div class="bounding">
+                    <div class="bounding">
+                        <h5 class="boundingelem">work from feb 2022</h5>    
+                    </div>     
+                </div>     
             </div>
             <div id="herofooter">
-                <a href="#">Previously worked at ToppersNotes 
+                <a href="https://www.toppersnotes.co/" target="_blank">Previously worked at ToppersNotes 
                     <i class="ri-arrow-right-up-line"></i>
                 </a>
                 <div id="iconset">
@@ -34,25 +56,35 @@
                     <div class="circle"><i class="ri-arrow-down-line"></i></div>
                 </div>
             </div>
-        </div> -->
+        </div>
 
-        <!-- <div id="second">
-            <div class="elem">
-                <img src="./pixel.png" alt="" />
+        <div id="second">
+            <div class="elem ">
+                <a href="https://poojahooda22.github.io/Pixel_website/" ><img src="./pixel.png" alt="" />
                 <h1>Pixel website</h1>
-                <p>2023</p>
+                </a>
             </div>
             <div class="elem">
-                <img src="./tab-bar.png" alt="" />
-                <h1>Animated tab bar</h1>
-                <p>2023</p>
+                <a href="https://poojahooda22.github.io/Animated-tab-bar/" ><img src="./tab-bar.png" alt="" />
+                        <h1>Animated tab bar</h1> 
+                </a>
+            </div>
+            <div class="elem">
+                <a href="https://poojahooda22.github.io/Button-rainbow-effect/"><img src="./button-rainbow.png" alt="" />
+                <h1>Button Rainbow</h1>
+                </a>
+            </div>
+            <div class="elem">
+                <a href="https://poojahooda22.github.io/Object_Oriented_Fractal_Trees/"><img src="./object-tree.png" alt="" />
+                <h1>Fractal Tree</h1>
+                </a>
             </div>
             <div class="elem elemlast">
-                <img src="./nft.png" alt="" />
-                <h1>nft landing page</h1>
-                <p>2023</p>
+                <a href="https://codepen.io/robinhudh/pen/dywpOEe"><img src="./car.png" alt=""/>
+                <h1>Modal Animation</h1>
+                </a>
             </div>
-        </div> -->
+        </div>
 
         <div id="about">
             <!-- <img  src="./IMG20230823144508.jpg" alt="" /> -->
@@ -60,9 +92,36 @@
                 <h5>(About me)</h5>
                 <p>I'm a React developer with six months of dedicated front-end     learning under my belt. My passion lies in crafting responsive websites that seamlessly adapt to any device. I thrive on exploring 2D and 3D frameworks to create interactive web experiences that captivate users. My main drive is to make websites not just functional but also visually appealing, with the ultimate goal of bringing a smile to people's faces through my work.
                 </p>
-                <a href="#">Let's Connect</a>
+                <a href="https://www.linkedin.com/in/pooja-h-21b473124/" target="_blank" class="chronicle">
+                    <span><em>Let's talk</em></span>
+                    <span><em>Let's talk</em></span>
+                </a>
             </div>   
         </div>
+
+        <div id="subscribe">
+            <h4>
+                follow me on linkedin <i class="ri-arrow-right-up-line"></i>
+            </h4>      
+        </div>
+
+        <div id="footer">
+            <div id="footerleft">
+                <h4>© 2023 Pooja Hooda</h4>
+            </div>
+            <div id="footerright"> 
+                <a href="https://www.linkedin.com/in/pooja-h-21b473124/"  target="_blank">linkedin</a>
+                <a href="https://github.com/poojahooda22" target="_blank">Github</a>
+                <a href="https://leetcode.com/phooda938/" target="_blank">leetcode</a>
+                <a href="https://codepen.io/robinhudh" target="_blank">codepen</a>
+            </div>
+        </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+        integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
