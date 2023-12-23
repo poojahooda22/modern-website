@@ -220,13 +220,16 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
     color: white;
     padding-top: 250px;
     padding-left: 40vw;
     padding-bottom: 160px;
-    width: 100%;
+    width: 80%;
     background-color: rgb(0, 0, 0);
 }
+
+
 
 #textabout {
     width: 50vw;
