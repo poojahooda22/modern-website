@@ -209,9 +209,10 @@ html, body {
     pointer-events: none;
     z-index: 999;
     position: absolute;
-    height: 120%;
+    width: 450px;
+    height: 140%;
     transform: translate(-50%, -50%);
-    border-radius: 30px;
+    border-radius: 50px;
 }
 
 
