@@ -2,9 +2,30 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "General Sans";
     
+  
 } 
+
+@font-face {
+    font-family: "Mono";
+    src: url(./Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Monospace";
+    src: url(./MonaspaceArgon-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Monospace-kry";
+    src: url(./MonaspaceKrypton-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Monospace-neon";
+    src: url(./MonaspaceNeon-Bold.ttf);
+}
+
 
 html, body {
     width: 100%;
@@ -59,6 +80,7 @@ html, body {
     text-decoration: none;
     font-size: 18px;
     color: white;
+    font-family: "Mono";
 }
 
 #navright {
@@ -76,7 +98,7 @@ html, body {
 }
 
 #heading {
-    margin-top: 60px;
+    margin-top: 150px;
 }
 
 #heading h1 {
@@ -88,6 +110,7 @@ html, body {
     font-weight: 800;
     margin-left: 40px;
     opacity: .6;
+    font-family: "Monospace-neon";
 
 }
 
@@ -100,14 +123,14 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: end;
-    
-    
+ 
 }
 
 .blockText h5 {
     text-transform: uppercase;
     font-size: 15px;
     text-align: right !important;
+    font-family: "Mono";
 }
 
 #smallheadings {
@@ -116,6 +139,7 @@ html, body {
     align-items: flex-end; 
     margin-top: 240px;
     padding-right: 50px;
+    font-family: "Mono";
 }
 
 #smallheadings h5 {
@@ -133,6 +157,7 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: "Mono";
     
 }
 
@@ -171,6 +196,7 @@ html, body {
     padding-right: 14vw;
     padding-top: 180px;
     width: 100%;
+    font-family: "Mono";
     /* height: 100vh; */
 }
 
@@ -180,7 +206,7 @@ html, body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-left: 40px;
+    margin-left: 50px;
     padding: 3.5vw 0;
     border-top: 0.35px solid rgb(93, 93, 93);
     
@@ -188,7 +214,8 @@ html, body {
 
 .elem h1 {
     text-transform: uppercase;
-    font-size: 7vw;
+    font-size: 6vw;
+    font-weight: 500;
     opacity: .7;
     
 
@@ -209,8 +236,8 @@ html, body {
     pointer-events: none;
     z-index: 999;
     position: absolute;
-    width: 450px;
-    height: 140%;
+    
+    height: 120%;
     transform: translate(-50%, -50%);
     border-radius: 50px;
 }
@@ -240,11 +267,14 @@ html, body {
     text-transform: uppercase;
     opacity: .6;
     margin-bottom: 10px;
+    font-family: "Mono";
 }
 
 #textabout p {
+    font-size: 18px;
     line-height: 2;
     margin-bottom: 30px;
+    font-family: "Mono";
     
 }
 
@@ -259,6 +289,7 @@ html, body {
 
 
 .chronicle {
+    font-family: "Mono";
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -336,6 +367,7 @@ html, body {
 #subscribe h4 {
      text-transform: uppercase;
      font-size: 14px;
+     font-family: "Mono";
 }
 
 #footer {
@@ -345,6 +377,7 @@ html, body {
     padding: 20px 40px;
     background-color: black;
     color: white;
+    font-family: "Mono";
 }
 
 #footerright {
